@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+   
+function camelcase(str)
+{
+    string.replace(/ /g,'-');
+    str = string.replace(/_/g,'-');
+    str1 = str.replace(/([a-z](?=[A-Z]))/g, '$1 ');
+    str2 = str1.replace(/\s+/g, '-').toLowerCase();
+    document.write("The string is : " +str2+ "\n");
+}
+const string = prompt('Enter a string: ');
+const result = camelcase(string);
+console.log(result)
+</script>
+</head>
+<body> 
+</body>
+</html>
