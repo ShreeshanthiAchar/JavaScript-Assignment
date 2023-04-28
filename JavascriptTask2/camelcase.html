@@ -10,11 +10,12 @@
 //function which takes string as an argument  
 function camelcase(str)
 {
+    //converting the string
     string.replace(/ /g,'-');
     str = string.replace(/_/g,'-');
     str1 = str.replace(/([a-z](?=[A-Z]))/g, '$1 ');
     str2 = str1.replace(/\s+/g, '-').toLowerCase();
-    document.write("The string is : " +str2+ "\n");
+    document.write("The string is : " +str2+ "\n");//returning the converted string
 }
 const string = prompt('Enter a string: ');
 const result = camelcase(string);
