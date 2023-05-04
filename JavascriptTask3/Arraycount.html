@@ -1,0 +1,45 @@
+<!--write a function which takes array of strings as a argument and return a object with Arr[i] as a key and count as a value
+input ['abc','def','cde','abc','def','elc']
+//output
+//{
+ //'abc': 2,
+ //'def': 2,
+ //'cde': 1,
+ //'elc': 1
+//}-->
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+function countArr(flr)
+{
+    var flr = [ "Jasmine", "Rose", "Lily", "Rose", "Lily", "Tulip","Lotus","Rose"]; //String array
+    let visited = Array.from({length: n}, (_, i) => false);
+    var n=flr.length;
+    for (let i = 0; i < n; i++) //Traverse through array elements
+    {
+       if (visited[i] == true)//Skip if duplicate element found
+          continue;
+        let count = 1;
+        for (let j = i + 1; j < n; j++) //Count of duplication
+        {
+            if (flr[i] == flr[j]) 
+            {
+              visited[j] = true;
+              count++;
+            }
+        }
+        document.write(flr[i] + ":" + count + "<br/>");
+    }
+}
+var flr = [ "Jasmine", "Rose", "Lily", "Rose", "Lily", "Tulip","Lotus","Rose"];
+countArr(flr);//calling function
+
+</script>
+</head>
+<body> 
+</body>
+</html>
+
+   
