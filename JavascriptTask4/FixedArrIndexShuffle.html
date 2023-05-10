@@ -42,6 +42,7 @@ const fixedShuffleIndex = (a, f) =>
   
 var a = [1, 2, 4, 5, 7, 3];
 var f =  [true, false, true, false, true, false]; //true is fixed and false is variable elements
+//Displaying output in a fixed time interval
 setInterval(() => 
 {
   document.getElementById('hello').innerHTML = JSON.stringify(fixedShuffleIndex(a, f))
